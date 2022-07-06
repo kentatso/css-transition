@@ -1,0 +1,175 @@
+div.smilefake {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	display: block;
+	background: #ffe732;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fffd8d09), to(#fffd8d09));
+	background: -moz-linear-gradient(top,  #fffd8d09,  #fffd8d09);	
+	box-shadow: inset 0px -14px 14px rgba(0, 0, 0, .3), 0px 2px 20px rgba(0, 0, 0, .6);
+	-webkit-box-shadow: inset 0px -14px 14px rgba(0, 0, 0, .3), 0px 2px 20px rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0px -14px 14px rgba(0, 0, 0, .3), 0px 2px 20px rgba(0, 0, 0, .6);
+	position: absolute ;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+
+	
+    transition: background-color 1s ease-out;
+}
+
+.smilefake:hover {
+        animation: effect 4s linear infinite;
+		background: linear-gradient(#ff0000,#2bff00);
+		
+        cursor: pointer;
+}
+	  @keyframes effect {
+        0% {
+            background: linear-gradient(#ff0000, #eeff01);
+        }
+  
+        25% {
+            background: linear-gradient(#0026ff, #2bff00);
+        }
+  
+        50% {
+            background: linear-gradient(#2bff00, #00f7ff);
+        }
+		
+		75% {
+            background: linear-gradient(#eeff01, #5902a0);
+        }
+		100% {
+            background: linear-gradient(#ff00d4, #00f7ff);
+        }
+	}
+	
+p.eyes {
+	width: 50px;
+	height: 80px;
+	background: #222;
+	border-radius: 100px/160px;
+	-webkit-border-radius: 100px 160px;
+	-moz-border-radius: 100px/160px;
+	position: absolute;
+	top: 40px;
+	
+	}	
+	
+	p.eyes.lefteye {
+		left: 75px;
+		}
+		
+	p.eyes.righteye {
+		right: 75px;
+		}
+		
+div.smile {
+	width: 200px;
+	height: 70px;
+	border: 10px solid #222;
+	border-top: 0;
+	background: rgba(0,0,0,0);
+	-moz-border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	-webkit-border-radius: 0 0 120px 120px 0 0 90px 90px;
+	border-radius: 0 0 120px 120px / 0 0 90px 90px;
+	position: absolute;
+	bottom: 50px;
+	left: 38px;
+	
+	}
+
+
+div.corner {
+	width: 10px;
+	height: 30px;
+	background: #222;
+	border-radius: 100px/160px;
+	-webkit-border-radius: 100px 160px;
+	-moz-border-radius: 100px/160px;
+	position: absolute;
+	top: -12px;
+	-webkit-transform: rotate(65deg);
+	-moz-transform: rotate(65deg);
+	left: -12px;
+	
+	}
+	
+div.corner.right {
+		left: 202px;
+		-webkit-transform: rotate(-65deg);
+		-moz-transform: rotate(-65deg);	
+			
+	}
+
+body {
+		background-color: #c5c5c5;
+}
+
+body:before,
+body:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  background: rgb(238, 255, 0);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
